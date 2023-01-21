@@ -41,13 +41,14 @@ body {
   align-items: center;
   flex-direction: column;
   height: max-content;
+  padding: 10px;
 }
 
 /* Animations */
 
 @keyframes down {
   0% {
-    transform: translateY(-90vw);
+    transform: translateY(-200vw);
   }
   
   100% {
