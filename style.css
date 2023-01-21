@@ -4,6 +4,7 @@
   font-family: "Red Hat Mono", monospace;
   color: white;
   max-width: 100%;
+  --idle-pos: -5000px;
 }
 
 :root {
@@ -41,27 +42,29 @@ body {
   align-items: center;
   flex-direction: column;
   height: max-content;
-  padding: 10px;
+  padding-bottom: 100px;
 }
 
 /* Animations */
 
 @keyframes down {
   0% {
-    transform: translateY(-200vw);
+    top: var(--idle-pos);
   }
   
   100% {
-    transform: translateY(0%);
+    top: 0;
   }
 }
 
-/* Childern of body */
+/* Children of body */
 
 .hello_text {
   --display: unset;
   margin-top: 2%;
+  position: relative;
   animation: down 2s forwards;
+  top: var(--idle-pos);
 }
 
 .info {
@@ -81,9 +84,12 @@ body {
   height: min-content;
   width: 60vw;
   overflow: wrap;
+  position: relative;
+
   animation: down 2s forwards;
+  top: var(--idle-pos);
   animation-delay: 2s;
-  transform: translateY(-1000vh);
+  
 } 
 
 .projects {
@@ -92,17 +98,20 @@ body {
   min-width: 50vw;
   padding: 10px;
   border-radius: 10px;
-  
+  position: relative;
+  top: var(--idle-pos);
   animation: down 2s forwards;
   animation-delay: 5s;
-  transform: translateY(-1000vh);
+  
 }
 
 .project_text {
   font-size: 2rem;
+  top: var(--idle-pos);
   animation: down 2s forwards;
   animation-delay: 5s;
-  transform: translateY(-1000vh);
+  position: relative;
+  
 }
 
 /* other things */
@@ -145,9 +154,11 @@ ul {
   width: 90%;
   text-align: flex-start;
   font-size: 2rem;
+  position: relative;
+  top: var(--idle-pos);
   animation: down 2s forwards;
   animation-delay: 2.1s;
-  transform: translateY(-1000vh);
+  
 }
 
 .links {
