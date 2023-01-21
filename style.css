@@ -181,15 +181,15 @@ body {
   font-size: 1rem;
 }
 
-.color::before {
+.color::after {
   content: "";
-    width: 1rem;
-    height: 1rem;
-    background-color: #0FD985;
-    outline: 1px black solid;
-    position: absolute;
-    margin-block: -2.1rem;
-    margin-inline: 14.5rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: #0FD985;
+  outline: 1px black solid;
+  position: absolute;
+  margin-block: 0.2rem;
+  margin-inline: 0.2rem;
 }
 
 .show { filter: opacity(100%)}
