@@ -3,6 +3,7 @@
 * {
   font-family: "Red Hat Mono", monospace;
   color: white;
+  max-width: 100%;
 }
 
 :root {
@@ -123,7 +124,7 @@ ul {
   height: min-content;
   width: 100%;
   grid-template-columns: repeat(auto-fit, 100px);
-  gap: 2vw
+  gap: max(50px, 2vw);
 }
 
 .item {
@@ -150,12 +151,16 @@ ul {
 
 .links {
   position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
   bottom: 10px;
   left: 10px;
 }
 
 .links * {
   cursor: pointer;
+  margin: 0px;
+  padding: 0px;
 }
 
 .image, .image * {
@@ -174,7 +179,9 @@ ul {
   border-radius: 20px;
   border-bottom-left-radius: 5px; 
   left: 75px;
+  filter: opacity(0);
   transition: filter 0.2s ease;
+  cursor: unset;
 }
 
 .popup h2 {
@@ -194,7 +201,7 @@ ul {
     margin-inline: 63px;
 }
 
-.transparent { filter: opacity(0)}
+.show { filter: opacity(100%)}
 
 .hidden { display: none !important;}
 
