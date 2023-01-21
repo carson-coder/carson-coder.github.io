@@ -47,8 +47,44 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: max-content;
+  /* height: max-content; */
   padding-bottom: 100px;
+  animation: body-fix 10s, scroll 0s 6s forwards, hide 5990ms 10ms;
+  overflow: scroll;
+}
+
+head {
+  animation: body-fix 10s;
+}
+
+@keyframes body-fix {
+  0% {
+    height: 100%;
+  }
+  50% {
+    height: 100%;
+  }
+  90% {
+    height: 200%;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    overflow: scroll;
+  }
+  100% {
+    overflow: scroll;
+  }
+}
+
+@keyframes hide {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: hidden;
+  }
 }
 
 /* Animations */
@@ -118,6 +154,27 @@ body {
   position: relative;
 }
 
+.things {
+  top: var(--idle-pos);
+  animation: down 2s forwards;
+  animation-delay: 7s;
+  position: relative;
+}
+
+.things > .main {
+  background-color: rgb(23, 21, 34);
+  padding: 10%;
+  border-radius: 10px;
+}
+
+.things > .main > * {
+  padding: 10px;
+}
+
+.things > .main > *:not(:nth-child(1)) {
+  border-top: rgb(62, 62, 62) 2px solid;
+}
+
 /* other things */
 
 .projects > ul > li {
@@ -146,6 +203,9 @@ body {
   flex-direction: column-reverse;
   bottom: 10px;
   left: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .links * {

@@ -9,3 +9,11 @@ function popup(text) {
 setTimeout(() => {
   document.getElementById("popup").className = "popup"
 }, 500)
+
+var scroll = setInterval(() => {
+  window.scrollTo(0, 0)
+}, 5)
+
+setTimeout(() => {
+  clearInterval(scroll)
+}, 1000)
