@@ -102,7 +102,6 @@ body {
   top: var(--idle-pos);
   animation: down 2s forwards;
   animation-delay: 5s;
-  
 }
 
 .project_text {
@@ -111,13 +110,16 @@ body {
   animation: down 2s forwards;
   animation-delay: 5s;
   position: relative;
-  
 }
 
 /* other things */
 
-.projects ul li {
-  margin: 10px;
+.projects > ul > li {
+  padding: 10px;
+}
+
+.projects > ul > li:not(:nth-child(1)) {
+  border-top: 2px solid #5a5a5a;
 }
 
 ul {
@@ -209,8 +211,8 @@ ul {
     background-color: #0FD985;
     outline: 1px black solid;
     position: absolute;
-    margin-block: -33px;
-    margin-inline: 63px;
+    margin-block: -2.1rem;
+    margin-inline: 14.5rem;
 }
 
 .show { filter: opacity(100%)}
