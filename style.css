@@ -7,6 +7,12 @@
   --idle-pos: -5000px;
 }
 
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
 :root {
   --background-color: #134
 }
@@ -122,34 +128,6 @@ body {
   border-top: 2px solid #5a5a5a;
 }
 
-ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-.items {
-  --max-width: max(6vw, 200px);
-  --min-width: max(5vw, 200px);
-  
-  display: grid;
-  height: min-content;
-  width: 100%;
-  grid-template-columns: repeat(auto-fit, 100px);
-  gap: max(50px, 2vw);
-}
-
-.item {
-  background: #103245;
-  max-width: var(--max-width);
-  border-radius: 1vw;
-  padding: 1px;
-  padding-inline: 10px;
-  height: max-content;
-  width: 6rem;
-  margin-inline: 20px;
-}
-
 .info h2 {
   border-radius: 100vw;
   padding: 20px;
@@ -160,7 +138,6 @@ ul {
   top: var(--idle-pos);
   animation: down 2s forwards;
   animation-delay: 2.1s;
-  
 }
 
 .links {
