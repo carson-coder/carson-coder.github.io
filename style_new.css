@@ -15,11 +15,26 @@ body {
 }
 
 .Terminal {
-    padding: 0px;
-    margin: 10px;
-    height: calc(100vh - 20px);
+    --padding: 50px;
+    --margin: 10px;
+    padding: var(--padding);
+    margin: var(--margin);
+    height: calc(100vh - calc(calc(var(--padding) + var(--margin)) * 2));
     border-radius: 10px;
     background: #111;
+    color: white;
+}
+
+input {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1.01rem;
+    margin-left: 10px;
+}
+
+input:focus {
+    outline: none;
 }
 
 @keyframes gradient {
