@@ -17,8 +17,10 @@ function command_handler(command)
     switch (command.toLowerCase()){
         case "help":
             help(content)
+            break
         case "clear":
             clear(content)
+            break
         default:
             content.innerHTML += "Error: Unknown command. try help<br>"
     }
