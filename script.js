@@ -13,9 +13,9 @@ function on_load() {
 
 projects = {
     "This portfolio": "https://github.com/carson-coder/carson-coder.gtihub.io",
-    "Pygame Display. For better python pygame designing": "https://github.com/carson-coder/Pygame-Display",
-    "WLED light controler for controling your cool wled lights": "https://pypi.org/project/WLED-light-controller/",
-    "Audio streamer test. Just a test for streaming audio": "https://github.com/carson-coder/Server-Client-Audio-Transfer"
+    "Pygame Display.<br>For better python pygame designing": "https://github.com/carson-coder/Pygame-Display",
+    "WLED light controler<br>for controling your cool wled lights": "https://pypi.org/project/WLED-light-controller/",
+    "Audio streamer test.<br>Just a test for streaming audio": "https://github.com/carson-coder/Server-Client-Audio-Transfer"
 }
 
 links = {
@@ -47,6 +47,7 @@ function command_handler(command)
         default:
             content.innerHTML += "Error: Unknown command. try help<br>"
     }
+    terminal.scroll(0, terminal.scrollHeight);
 }
 
 function clear(console)
@@ -57,4 +58,12 @@ function clear(console)
 function help(console)
 {
     console.innerHTML += "<br>List of commands<br><br>Help - Prints this message<br>Projects - list out my projects<br>Links - Links to contact me or see things I have done<br>Clear - clear the screen<br>"
+}
+
+function Hide() {
+    if (!terminal.classList.contains("hidden")) {
+        terminal.className += " hidden"
+    } else {
+        terminal.classList.remove("hidden")
+    }
 }
