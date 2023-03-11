@@ -24,7 +24,7 @@ body {
     border-radius: 10px;
     background: #111;
     color: white;
-    overflow: scroll;
+    overflow-x: hidden;
     transition: margin 1s;
 }
 
